@@ -1,0 +1,51 @@
+stalky_stalker - API wrappers for social search services
+
+
+DESCRIPTION
+------------------------------------------------
+Stalky exists to make it easier to get all publicly available information about a user across the web. Why would you want to do this?
+*Fill is missing user information on your site
+*Track down customers and users with ease (disempower them?)
+*Identity verification and validation
+*Do social searches given one piece of user info
+
+Stalky works by taking one piece of info and running it against the most popular social search API's, such as Qwerly, Rapleaf, Klout and others. To get the full capabilities you are going to have to get API keys for all the services listed below and put them in a the "stalky.rb" initilizer or run "rails stalky::install" and fill in the appropraite information yourself in the stalky.rb file yourself.
+
+The more API keys you get, the greater the functionality
+
+REQUIREMENTS
+-----------------------------------------------
+To get full functionality, you will need to get API keys for the following services:
+
+Twitter
+Facebook
+Qwerly
+Rapleaf
+Klout
+
+
+EXAMPLES
+------------------------------------------------
+++ Get additional user field information given one piece of info ++
+<%= User.stalky.name %> will go through all available fields in the "User" model and try to get the most likely "name" candidate. It will increase/decrease the saturation of the text based on how many candidates it finds. If there is only one candidate, it will choose that one be default and write to db upon save. 
+
+You can ajaxify this to have the other form fields fill with the most likely candidate upon filling in one piece of data. 
+
+<%= User.stalky.name.verify? %> will create a dropdown box of all available candidates and allow the user to verify the information before writing the value to db.
+
+++ Manually search for user info
+Stalky::New.search.email() - returns a hash with all information given that you have a user's email address
+
+Stalky::New.search.email --verbose - same as above but lists the data sources for each piece of PII.
+
+API DOCUMENTATION
+------------------------------------------------
+
+
+
+
+
+
+
+
+
