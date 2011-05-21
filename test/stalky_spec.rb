@@ -4,12 +4,12 @@ require '../lib/stalky'
 describe Stalky do
 	context "search" do
 		before(:each) do
-		    param = "Beautiful"
+		    param = "poop"
 			@stalky = mock(Stalky)
 			@stalky.stub!(:search).and_return("Hello #{param}")
 		end
 	    
-	    param = "Beautiful"
+	    param = "poop"
 	    
 		it "#search should return Hello #{param}" do
 			@stalky.should_receive(:search).and_return("Hello #{param}") 
