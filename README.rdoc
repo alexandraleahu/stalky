@@ -6,7 +6,7 @@ License::   MIT
 
 =Stalky
 
-==INSTALLATOION
+==INSTALLATION
 
 <tt>gem install stalky</tt>
 
