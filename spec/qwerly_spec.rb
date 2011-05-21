@@ -1,5 +1,5 @@
 #test/qwerly_spec.rb
-require '../lib/Qwerly/qwerly.rb'
+require 'stalky/qwerly.rb'
 
 describe Qwerly do
 	context "search" do

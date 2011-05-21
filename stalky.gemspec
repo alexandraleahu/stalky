@@ -12,5 +12,6 @@ Gem::Specification.new do |s|
   s.files = ["lib/stalky.rb", "lib/stalky/qwerly.rb", "lib/stalky/rapleaf.rb"]
   s.add_dependency("rapleaf_api")
   s.add_dependency("json")
+  s.add_development_dependency("rspec")
 end
 

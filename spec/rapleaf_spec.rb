@@ -1,5 +1,5 @@
 #test/rapleaf_spec.rb
-require '../lib/Rapleaf/rapleaf.rb'
+require 'stalky/rapleaf.rb'
 
 describe Rapleaf do
 
