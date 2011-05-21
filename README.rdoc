@@ -36,17 +36,16 @@ You can request API keys for the following services at the URL's below:
 
 ==EXAMPLES
 
-<tt>	User.stalky.name #query all available fields in the "User" model and get most likely "name" value. If there are multiple results an array will be returned. You can ajaxify this to have the other form fields auto-fill based on the results. 
+<tt> User.stalky.name #query all available fields in the "User" model and get most likely "name" value. If there are multiple results an array will be returned. You can ajaxify this to have the other form fields auto-fill based on the results. 
 
-		User.stalky.name.verify? #will ask to verify before writing to db
+	User.stalky.name.verify? #will ask to verify before writing to db
 
-		Stalky::New.search("someemail@gmail.com") #returns a hash with full results from a user's email address
+	Stalky::New.search("someemail@gmail.com") #returns a hash with full results from a user's email address
 
-		Stalky::new.Search("thoughtpunch") #returns hash from Twitter or Facebook user ID
+	Stalky::new.Search("thoughtpunch") #returns hash from Twitter or Facebook user ID
 
-		#switches
-			--verbose #lists the data sources for each piece of PII
-</tt>
+	#switches
+		--verbose #lists the data sources for each piece of PII </tt>
 
 ==CONTRIBUTING
 
