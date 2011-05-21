@@ -1,5 +1,5 @@
 #test/stalky_spec.rb
-require '../lib/stalky'
+require 'stalky'
 
 describe Stalky do
 	context "search" do

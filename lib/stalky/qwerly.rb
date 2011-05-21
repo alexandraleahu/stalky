@@ -19,11 +19,11 @@ class Qwerly
 	    search_types = %w[email twitter facebook]
 	    
 	    search_types.each do |type|
-	        begin
-			search_url = "http://api.qwerly.com/v1/#{type}/#{param}/?api_key=#{api_key}"
-		    resp = Net::HTTP.get_response(URI.parse(search_url))
-		    #this is a global for troubleshooting purposes
-		    $result = JSON.parse(resp.body)
+	      begin
+			    search_url = "http://api.qwerly.com/v1/#{type}/#{param}/?api_key=#{api_key}"
+		      resp = Net::HTTP.get_response(URI.parse(search_url))
+		      #this is a global for troubleshooting purposes
+		      $result = JSON.parse(resp.body)
 		    
 		    rescue JSON::ParserError
 		    	puts "JSON Error: Make sure you have a valid API key"	
@@ -31,12 +31,12 @@ class Qwerly
 		    
 		    if $result.nil?
 		    	puts "Search failed. Nothing to return"
-		    else
-				if $result.has_key? "Error" or "message"
-				   $result.each {|key, value| puts "#{key}: #{value}"}
-				else
+        else
+				  if $result.has_key? "Error" or "message"
+				    $result.each {|key, value| puts "#{key}: #{value}"}
+				  else
 				    #I have "name" hardcoded here. Want to get this a better way
-					puts $result["profile"]["name"]
+					  puts $result["profile"]["name"]
 		    	end
 		    end
    		end
