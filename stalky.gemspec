@@ -9,5 +9,8 @@ Gem::Specification.new do |s|
   s.homepage    		= "http://github.com/thoughtpunch/stalky"
   s.summary     		= "Query the social API"
   s.description 		= "Stalky provides a friendly wrapper for the most common social API's, such as Qwerly, Rapleaf and others"
-  s.files = ["lib/stalky.rb", "lib/stalky/facebook.rb", "lib/stalky/qwerly.rb", "lib/stalky/rapleaf.rb"]
+  s.files = ["lib/stalky.rb", "lib/stalky/qwerly.rb", "lib/stalky/rapleaf.rb"]
+  s.add_dependency("rapleaf_api")
+  s.add_dependency("json")
 end
+
