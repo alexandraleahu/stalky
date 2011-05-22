@@ -1,4 +1,5 @@
 #lib/stalky.rb
+require 'stalky/version'
 require 'stalky/qwerly'
 require 'stalky/rapleaf'
 
@@ -9,9 +10,9 @@ require 'stalky/rapleaf'
 #					   "name" in the JSON hash
 
 
-class Stalky
+module Stalky
 
-   def search(param)
+   def self.search(param)
       #somehow search through all available sources 
       #(i.e. stalky/qwerly, stalky/rapleaf)
       #with the search parameter and get results as follows:
