@@ -1,12 +1,12 @@
 #test/rapleaf_spec.rb
 require 'stalky/rapleaf.rb'
 
-describe Rapleaf do
+describe Stalky::Rapleaf do
 
 	context "search" do
 		before(:each) do
 		    param = "poop"
-			@Rapleaf = mock(Rapleaf)
+			@Rapleaf = mock(Stalky::Rapleaf)
 			@Rapleaf.stub!(:search).and_return("Hello #{param}")
 		end
 	    

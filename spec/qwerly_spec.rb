@@ -1,11 +1,11 @@
 #test/qwerly_spec.rb
 require 'stalky/qwerly.rb'
 
-describe Qwerly do
+describe Stalky::Qwerly do
 	context "search" do
 		before(:each) do
 		    param = "poop"
-			@Qwerly = mock(Qwerly)
+			@Qwerly = mock(Stalky::Qwerly)
 			@Qwerly.stub!(:search).and_return("Hello #{param}")
 		end
 	    
